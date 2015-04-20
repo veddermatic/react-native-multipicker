@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7A37E2101AE588B100920C3B /* VDRPickerIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */; };
-		7A37E2121AE588B100920C3B /* VDRPickerIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2111AE588B100920C3B /* VDRPickerIOS.m */; };
 		7A37E2181AE588B100920C3B /* libVDRPickerIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */; };
+		7A37E22A1AE58A7F00920C3B /* VDRPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2271AE58A7F00920C3B /* VDRPicker.m */; };
+		7A37E22B1AE58A7F00920C3B /* VDRPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,10 @@
 		7A37E2111AE588B100920C3B /* VDRPickerIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDRPickerIOS.m; sourceTree = "<group>"; };
 		7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VDRPickerIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A37E21D1AE588B100920C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A37E2261AE58A7F00920C3B /* VDRPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRPicker.h; sourceTree = "<group>"; };
+		7A37E2271AE58A7F00920C3B /* VDRPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDRPicker.m; sourceTree = "<group>"; };
+		7A37E2281AE58A7F00920C3B /* VDRPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRPickerManager.h; sourceTree = "<group>"; };
+		7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDRPickerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,10 @@
 		7A37E20E1AE588B100920C3B /* VDRPickerIOS */ = {
 			isa = PBXGroup;
 			children = (
+				7A37E2261AE58A7F00920C3B /* VDRPicker.h */,
+				7A37E2271AE58A7F00920C3B /* VDRPicker.m */,
+				7A37E2281AE58A7F00920C3B /* VDRPickerManager.h */,
+				7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */,
 				7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */,
 				7A37E2111AE588B100920C3B /* VDRPickerIOS.m */,
 			);
@@ -193,7 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A37E2121AE588B100920C3B /* VDRPickerIOS.m in Sources */,
+				7A37E22B1AE58A7F00920C3B /* VDRPickerManager.m in Sources */,
+				7A37E22A1AE58A7F00920C3B /* VDRPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +260,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,6 +302,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -296,6 +318,12 @@
 		7A37E2211AE588B100920C3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_packages/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -305,6 +333,12 @@
 		7A37E2221AE588B100920C3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_packages/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -1,0 +1,25 @@
+{
+  "name": "react-native-multipicker",
+  "version": "0.9.0",
+  "description": "A UIPicker implemnetation that allows multiple UIPicker components.",
+  "main": "vedder-picker.ios",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/veddermatic/react-native-multipicker.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Dave Vedder <veddermatic@gmail.com> (http://eskimospy.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veddermatic/react-native-multipicker/issues"
+  },
+  "homepage": "https://github.com/veddermatic/react-native-multipicker#readme",
+  "dependencies": {
+    "react-native": "^0.4.0"
+  }
+}
