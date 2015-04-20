@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A37E2101AE588B100920C3B /* VDRPickerIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */; };
+		7A37E2121AE588B100920C3B /* VDRPickerIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2111AE588B100920C3B /* VDRPickerIOS.m */; };
+		7A37E2181AE588B100920C3B /* libVDRPickerIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A37E2191AE588B100920C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A37E2041AE588B100920C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A37E20B1AE588B100920C3B;
+			remoteInfo = VDRPickerIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A37E20A1AE588B100920C3B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				7A37E2101AE588B100920C3B /* VDRPickerIOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVDRPickerIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VDRPickerIOS.h; sourceTree = "<group>"; };
+		7A37E2111AE588B100920C3B /* VDRPickerIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDRPickerIOS.m; sourceTree = "<group>"; };
+		7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VDRPickerIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A37E21D1AE588B100920C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A37E2091AE588B100920C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A37E2141AE588B100920C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A37E2181AE588B100920C3B /* libVDRPickerIOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A37E2031AE588B100920C3B = {
+			isa = PBXGroup;
+			children = (
+				7A37E20E1AE588B100920C3B /* VDRPickerIOS */,
+				7A37E21B1AE588B100920C3B /* VDRPickerIOSTests */,
+				7A37E20D1AE588B100920C3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A37E20D1AE588B100920C3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */,
+				7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A37E20E1AE588B100920C3B /* VDRPickerIOS */ = {
+			isa = PBXGroup;
+			children = (
+				7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */,
+				7A37E2111AE588B100920C3B /* VDRPickerIOS.m */,
+			);
+			path = VDRPickerIOS;
+			sourceTree = "<group>";
+		};
+		7A37E21B1AE588B100920C3B /* VDRPickerIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A37E21C1AE588B100920C3B /* Supporting Files */,
+			);
+			path = VDRPickerIOSTests;
+			sourceTree = "<group>";
+		};
+		7A37E21C1AE588B100920C3B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A37E21D1AE588B100920C3B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A37E20B1AE588B100920C3B /* VDRPickerIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A37E2201AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOS" */;
+			buildPhases = (
+				7A37E2081AE588B100920C3B /* Sources */,
+				7A37E2091AE588B100920C3B /* Frameworks */,
+				7A37E20A1AE588B100920C3B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VDRPickerIOS;
+			productName = VDRPickerIOS;
+			productReference = 7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7A37E2161AE588B100920C3B /* VDRPickerIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A37E2231AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOSTests" */;
+			buildPhases = (
+				7A37E2131AE588B100920C3B /* Sources */,
+				7A37E2141AE588B100920C3B /* Frameworks */,
+				7A37E2151AE588B100920C3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A37E21A1AE588B100920C3B /* PBXTargetDependency */,
+			);
+			name = VDRPickerIOSTests;
+			productName = VDRPickerIOSTests;
+			productReference = 7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A37E2041AE588B100920C3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Dave Vedder";
+				TargetAttributes = {
+					7A37E20B1AE588B100920C3B = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					7A37E2161AE588B100920C3B = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = 7A37E2071AE588B100920C3B /* Build configuration list for PBXProject "VDRPickerIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7A37E2031AE588B100920C3B;
+			productRefGroup = 7A37E20D1AE588B100920C3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A37E20B1AE588B100920C3B /* VDRPickerIOS */,
+				7A37E2161AE588B100920C3B /* VDRPickerIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A37E2151AE588B100920C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A37E2081AE588B100920C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A37E2121AE588B100920C3B /* VDRPickerIOS.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A37E2131AE588B100920C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A37E21A1AE588B100920C3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A37E20B1AE588B100920C3B /* VDRPickerIOS */;
+			targetProxy = 7A37E2191AE588B100920C3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7A37E21E1AE588B100920C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7A37E21F1AE588B100920C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A37E2211AE588B100920C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7A37E2221AE588B100920C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7A37E2241AE588B100920C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VDRPickerIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A37E2251AE588B100920C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VDRPickerIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A37E2071AE588B100920C3B /* Build configuration list for PBXProject "VDRPickerIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A37E21E1AE588B100920C3B /* Debug */,
+				7A37E21F1AE588B100920C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A37E2201AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A37E2211AE588B100920C3B /* Debug */,
+				7A37E2221AE588B100920C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7A37E2231AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A37E2241AE588B100920C3B /* Debug */,
+				7A37E2251AE588B100920C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A37E2041AE588B100920C3B /* Project object */;
+}
