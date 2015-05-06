@@ -51,14 +51,12 @@ var VPickerIOS = React.createClass({
             var items = []
             var selectedIndex = 0; // sane default
             var checkVal = child.props.selectedValue;
-            var componentRef = child.ref || 'component_' + index;
             React.Children.forEach(child.props.children, function (child, idx) {
                 if (checkVal === child.props.value) {
                     selectedIndex = idx;
                 }
                 items.push({label: child.props.label, value: child.props.value}); 
             });
-            componentRefs.push(componentRef);
             componentData.push(items);
             selectedIndexes.push(selectedIndex);
         });
