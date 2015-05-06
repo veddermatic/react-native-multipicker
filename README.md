@@ -1,11 +1,11 @@
 # react-native-multipicker
 
-A UIPickerView proof of concept implementation that lets you have multiple components in your picker.
+A UIPickerView proof of concept implementation that allows you to have multiple components in your picker.
 
 You can make one like so:
 
     <VPickerIOS style={styles.picker} onChange={this._someOnChange}>
-        <VPickerComponent selectedValue={this.state.currentWord}>
+        <VPickerComponent selectedValue={this.state.currentWord} onChange={this._someOtherOnChange}>
             <VPickerItem value="How" label="How" />
             <VPickerItem value="now" label="now" />
             <VPickerItem value="brown" label="brown" />
