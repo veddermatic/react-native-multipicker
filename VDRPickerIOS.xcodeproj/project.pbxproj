@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A37E2101AE588B100920C3B /* VDRPickerIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */; };
 		7A37E2181AE588B100920C3B /* libVDRPickerIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */; };
 		7A37E22A1AE58A7F00920C3B /* VDRPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2271AE58A7F00920C3B /* VDRPicker.m */; };
 		7A37E22B1AE58A7F00920C3B /* VDRPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */; };
@@ -30,7 +29,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				7A37E2101AE588B100920C3B /* VDRPickerIOS.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +36,6 @@
 
 /* Begin PBXFileReference section */
 		7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVDRPickerIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VDRPickerIOS.h; sourceTree = "<group>"; };
-		7A37E2111AE588B100920C3B /* VDRPickerIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDRPickerIOS.m; sourceTree = "<group>"; };
 		7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VDRPickerIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A37E21D1AE588B100920C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A37E2261AE58A7F00920C3B /* VDRPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRPicker.h; sourceTree = "<group>"; };
@@ -92,8 +88,6 @@
 				7A37E2271AE58A7F00920C3B /* VDRPicker.m */,
 				7A37E2281AE58A7F00920C3B /* VDRPickerManager.h */,
 				7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */,
-				7A37E20F1AE588B100920C3B /* VDRPickerIOS.h */,
-				7A37E2111AE588B100920C3B /* VDRPickerIOS.m */,
 			);
 			path = VDRPickerIOS;
 			sourceTree = "<group>";
@@ -396,6 +390,7 @@
 				7A37E2221AE588B100920C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A37E2231AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +399,7 @@
 				7A37E2251AE588B100920C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

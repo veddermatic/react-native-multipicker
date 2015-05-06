@@ -17,7 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 
- node_modules/**/*
+node_modules/**/*
 
 # CocoaPods
 #
