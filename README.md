@@ -25,3 +25,5 @@ You can also set the `controlled` prop on `VPickerIOS` to have your selected ind
         ...
 
 Please note that this is still a work in progress, and you probalby should not use this unless you are just looking at the code for fun.
+
+I have a test project showing a simple and "complex" picker [here](https://github.com/veddermatic/VDRPickerTestProject).
