@@ -35,7 +35,8 @@ var PICKER = 'picker';
 var VPickerIOS = React.createClass({
 
     propTypes: {
-        onChange: React.PropTypes.func,
+        onChange: React.PropTypes.func, // event handler
+        controlled: React.PropTypes.bool, // if React can override native picker selections after a change.
     },
 
     mixins: [NativeMethodsMixin],
@@ -45,7 +46,6 @@ var VPickerIOS = React.createClass({
     _stateFromProps: function (props) {
         var componentData = [];
         var selectedIndexes = [];
-        var componentRefs = [];
 
         ReactChildren.forEach(props.children, function (child, index) {
             var items = []
@@ -71,28 +71,34 @@ var VPickerIOS = React.createClass({
         this.setState(this._stateFromProps(nextProps));
     },
 
-    // calls our change handlers and updates native component
     _onChange: function (event) {
-        var evt = event.nativeEvent;
-        // call any change handler on the component itself
+        var nativeEvent = event.nativeEvent;
+        // call any change handlers on the component itself
         if (this.props.onChange) {
-            this.props.onChange(evt);
+            this.props.onChange(nativeEvent);
         }
         if (this.props.valueChange) {
-            this.props.valueChange(evt);
+            this.props.valueChange(nativeEvent);
         }
         // call any change handlers on the child component picker that changed
-        // if it has one.
+        // if it has one. Doing it this way rather than storing references
+        // to child nodes and their onChage props in _stateFromProps because 
+        // React docs imply that may not be a good idea.
         ReactChildren.forEach(this.props.children, function (child, idx) {
-            if (idx === evt.component && child.props.onChange) {
-                child.props.onChange(evt);
+            if (idx === nativeEvent.component && child.props.onChange) {
+                child.props.onChange(nativeEvent);
             }
         });
-        
-        this.refs[PICKER].setNativeProps({
-            selectedIndexes: this.state.selectedIndexes,
+
+        var nativeProps = {
             componentData: this.state.componentData,
-        });
+        };
+        // if we are a controlled instance, we tell the native component what 
+        // it's value should be after any change.
+        if (this.props.controlled) {
+            nativeProps.selectedIndexes = this.state.selectedIndexes;
+        }
+        this.refs[PICKER].setNativeProps(nativeProps);
     },
 
     render: function() {

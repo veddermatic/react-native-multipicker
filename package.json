@@ -1,6 +1,6 @@
 {
   "name": "react-native-multipicker",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A UIPicker implemnetation that allows multiple UIPicker components.",
   "main": "vedder-picker.ios",
   "scripts": {

@@ -2,7 +2,7 @@
 
 A UIPickerView proof of concept implementation that allows you to have multiple components in your picker.
 
-You can make one like so:
+You can make a basic one like so:
 
     <VPickerIOS style={styles.picker} onChange={this._someOnChange}>
         <VPickerComponent selectedValue={this.state.currentWord} onChange={this._someOtherOnChange}>
@@ -18,5 +18,10 @@ You can make one like so:
             <VPickerItem value="Four" label="Four" />
         </VPickerComponent>
     </VPickerIOS>
+
+You can also set the `controlled` prop on `VPickerIOS` to have your selected indexes pushed back to the native component in case you need to validate selection:
+
+     <VPickerIOS style={styles.picker} onChange={this._someOnChange} controlled={true}>
+        ...
 
 Please note that this is still a work in progress, and you probalby should not use this unless you are just looking at the code for fun.
