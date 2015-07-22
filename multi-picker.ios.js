@@ -6,15 +6,6 @@
  *
  * @providesModule MultiPickerIOS
  *
- * This is a controlled component version of RNMultiPicker
- *
- * WARNING: this is a proof of concept. Don't use it for reals yet. Also,
- * if your container has `flex` set on it, the picker moves around oddly.
- * I'm not sure if that's something I broke, or it happens in the default one
- * as well. In addition, if you set a `width` on your picker, it seems to not
- * behave properly. Set a background color on it when you set the width and
- * you will see what I mean.
- *
  */
 'use strict';
 
@@ -31,29 +22,29 @@ var MultiPickerIOS = React.createClass({
     controlled:PropTypes.bool,
   },
 
-  getInitialState: function() {
+  getInitialState() {
     return this._stateFromProps(this.props);
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  componentWillReceiveProps(nextProps) {
     this.setState(this._stateFromProps(nextProps));
   },
 
   // converts child PickerComponent and their Item children into state
-  // that can be sent to  VDRPicker native class.
+  // that can be sent to RNMultiPicker native class.
   _stateFromProps: function (props) {
     var componentData = [];
     var selectedIndexes = [];
 
-    React.Children.forEach(props.children, function (child, index) {
+    React.Children.forEach(props.children, function(child, index) {
       var items = []
-      var selectedIndex = 0; // sane default
-      var checkVal = child.props.selectedValue;
 
-      React.Children.forEach(child.props.children, function (child, idx) {
-        if (checkVal === child.props.value) {
-          selectedIndex = idx;
-        }
+      var selectedIndex = 0;
+      if (child.props.selectedIndex) {
+        selectedIndex = child.props.selectedIndex;
+      }
+
+      React.Children.forEach(child.props.children, function(child, idx) {
         items.push({label: child.props.label, value: child.props.value});
       });
 
@@ -68,11 +59,11 @@ var MultiPickerIOS = React.createClass({
     var nativeEvent = event.nativeEvent;
     // Call any change handlers on the component itself
     if (this.props.onChange) {
-        this.props.onChange(nativeEvent);
+      this.props.onChange(nativeEvent);
     }
 
     if (this.props.valueChange) {
-        this.props.valueChange(nativeEvent);
+      this.props.valueChange(nativeEvent);
     }
 
     // Call any change handlers on the child component picker that changed
@@ -115,13 +106,13 @@ var MultiPickerIOS = React.createClass({
 // Represents a "section" of a picker.
 MultiPickerIOS.Group = React.createClass({
   propTypes: {
-      items: React.PropTypes.array,
-      selectedIndex: React.PropTypes.number,
-      onChange: React.PropTypes.func,
+    items: React.PropTypes.array,
+    selectedIndex: React.PropTypes.number,
+    onChange: React.PropTypes.func,
   },
 
   render() {
-      return null;
+    return null;
   },
 });
 
