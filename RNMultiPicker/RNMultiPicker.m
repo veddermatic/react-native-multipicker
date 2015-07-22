@@ -1,13 +1,9 @@
 //
-//  VDRPickerView.m
-//  VedderPicker
-//
 //  Created by David Vedder on 4/15/15.
-//  Copyright (c) 2015 Facebook. All rights reserved. I guess. I'm not sure
-//  how the whole thing works.
+//  Copyright (c) 2015 Facebook. All rights reserved.
 //
 
-#import "VDRPicker.h"
+#import "RNMultiPicker.h"
 
 #import "RCTConvert.h"
 #import "RCTEventDispatcher.h"
@@ -15,13 +11,11 @@
 #import "UIView+React.h"
 
 
-
-@interface VDRPicker() <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface RNMultiPicker() <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end
 
-// copying the react-native Picker way of doing this...
-@implementation VDRPicker
+@implementation RNMultiPicker
 {
   RCTEventDispatcher *_eventDispatcher;
   NSArray *_selectedIndexes;
@@ -48,6 +42,7 @@
 
   if (![_selectedIndexes isEqualToArray:selectedIndexes]) {
     BOOL animate = (_use_animation != 0);
+
     _selectedIndexes = [selectedIndexes copy];
     // TODO: see if this loop to check if we should bother updating is even
     // needed. React probably only updates us if we *do* need to update.
@@ -91,7 +86,7 @@
 }
 
 /**
- * Returns the  
+ * Returns the value for the row
  */
 - (id)valueForRow:(NSInteger)row inComponent:(NSInteger)component
 {
@@ -99,7 +94,7 @@
 }
 
 /**
- * 
+ * Returns the label for the row
  */
 - (NSString *)labelForRow:(NSInteger)row inComponent:(NSInteger)component
 {
@@ -107,9 +102,10 @@
 }
 
 #pragma mark - UIPickerViewDataSource
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [[_componentData objectAtIndex:component] count];
+  return [[_componentData objectAtIndex:component] count];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -127,12 +123,12 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
   NSDictionary *event = @{
-                          @"target": self.reactTag,
-                          @"newIndex": @(row),
-                          @"component": @(component),
-                          @"newValue": [self valueForRow:row inComponent:component]
-                          };
-  
+    @"target": self.reactTag,
+    @"newIndex": @(row),
+    @"component": @(component),
+    @"newValue": [self valueForRow:row inComponent:component]
+  };
+
   [_eventDispatcher sendInputEventWithName:@"topChange" body:event];
 }
 
