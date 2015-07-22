@@ -1,6 +1,7 @@
 # react-native-multi-picker
 
-A UIPickerView proof of concept implementation that allows you to have multiple components in your picker.
+A UIPickerView implementation that allows you to have multiple
+components in your picker.
 
 You can make a basic one like so:
 
