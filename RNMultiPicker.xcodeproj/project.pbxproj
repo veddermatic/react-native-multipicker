@@ -7,20 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A37E2181AE588B100920C3B /* libVDRPickerIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */; };
-		7A37E22A1AE58A7F00920C3B /* VDRPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2271AE58A7F00920C3B /* VDRPicker.m */; };
-		7A37E22B1AE58A7F00920C3B /* VDRPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */; };
+		CE683FD91B5F26EA00BF2B56 /* RNMultiPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE683FD61B5F26EA00BF2B56 /* RNMultiPickerManager.m */; };
+		CE683FDD1B5F278200BF2B56 /* RNMultiPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE683FDC1B5F278200BF2B56 /* RNMultiPicker.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7A37E2191AE588B100920C3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A37E2041AE588B100920C3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7A37E20B1AE588B100920C3B;
-			remoteInfo = VDRPickerIOS;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7A37E20A1AE588B100920C3B /* CopyFiles */ = {
@@ -35,13 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVDRPickerIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VDRPickerIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A37E21D1AE588B100920C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A37E2261AE58A7F00920C3B /* VDRPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRPicker.h; sourceTree = "<group>"; };
-		7A37E2271AE58A7F00920C3B /* VDRPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDRPicker.m; sourceTree = "<group>"; };
-		7A37E2281AE58A7F00920C3B /* VDRPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRPickerManager.h; sourceTree = "<group>"; };
-		7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDRPickerManager.m; sourceTree = "<group>"; };
+		7A37E20C1AE588B100920C3B /* libRNMultiPickerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMultiPickerIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE683FD51B5F26EA00BF2B56 /* RNMultiPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNMultiPickerManager.h; path = RNMultiPicker/RNMultiPickerManager.h; sourceTree = SOURCE_ROOT; };
+		CE683FD61B5F26EA00BF2B56 /* RNMultiPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNMultiPickerManager.m; path = RNMultiPicker/RNMultiPickerManager.m; sourceTree = SOURCE_ROOT; };
+		CE683FDB1B5F278200BF2B56 /* RNMultiPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNMultiPicker.h; path = RNMultiPicker/RNMultiPicker.h; sourceTree = SOURCE_ROOT; };
+		CE683FDC1B5F278200BF2B56 /* RNMultiPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNMultiPicker.m; path = RNMultiPicker/RNMultiPicker.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,22 +39,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A37E2141AE588B100920C3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A37E2181AE588B100920C3B /* libVDRPickerIOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7A37E2031AE588B100920C3B = {
 			isa = PBXGroup;
 			children = (
-				7A37E20E1AE588B100920C3B /* VDRPickerIOS */,
-				7A37E21B1AE588B100920C3B /* VDRPickerIOSTests */,
+				7A37E20E1AE588B100920C3B /* RNMultiPickerIOS */,
 				7A37E20D1AE588B100920C3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,45 +53,28 @@
 		7A37E20D1AE588B100920C3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */,
-				7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */,
+				7A37E20C1AE588B100920C3B /* libRNMultiPickerIOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7A37E20E1AE588B100920C3B /* VDRPickerIOS */ = {
+		7A37E20E1AE588B100920C3B /* RNMultiPickerIOS */ = {
 			isa = PBXGroup;
 			children = (
-				7A37E2261AE58A7F00920C3B /* VDRPicker.h */,
-				7A37E2271AE58A7F00920C3B /* VDRPicker.m */,
-				7A37E2281AE58A7F00920C3B /* VDRPickerManager.h */,
-				7A37E2291AE58A7F00920C3B /* VDRPickerManager.m */,
+				CE683FD51B5F26EA00BF2B56 /* RNMultiPickerManager.h */,
+				CE683FD61B5F26EA00BF2B56 /* RNMultiPickerManager.m */,
+				CE683FDB1B5F278200BF2B56 /* RNMultiPicker.h */,
+				CE683FDC1B5F278200BF2B56 /* RNMultiPicker.m */,
 			);
-			path = VDRPickerIOS;
-			sourceTree = "<group>";
-		};
-		7A37E21B1AE588B100920C3B /* VDRPickerIOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				7A37E21C1AE588B100920C3B /* Supporting Files */,
-			);
-			path = VDRPickerIOSTests;
-			sourceTree = "<group>";
-		};
-		7A37E21C1AE588B100920C3B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7A37E21D1AE588B100920C3B /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = RNMultiPickerIOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A37E20B1AE588B100920C3B /* VDRPickerIOS */ = {
+		7A37E20B1AE588B100920C3B /* RNMultiPickerIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A37E2201AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOS" */;
+			buildConfigurationList = 7A37E2201AE588B100920C3B /* Build configuration list for PBXNativeTarget "RNMultiPickerIOS" */;
 			buildPhases = (
 				7A37E2081AE588B100920C3B /* Sources */,
 				7A37E2091AE588B100920C3B /* Frameworks */,
@@ -123,28 +84,10 @@
 			);
 			dependencies = (
 			);
-			name = VDRPickerIOS;
-			productName = VDRPickerIOS;
-			productReference = 7A37E20C1AE588B100920C3B /* libVDRPickerIOS.a */;
+			name = RNMultiPickerIOS;
+			productName = RNMultiPickerIOS;
+			productReference = 7A37E20C1AE588B100920C3B /* libRNMultiPickerIOS.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		7A37E2161AE588B100920C3B /* VDRPickerIOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A37E2231AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOSTests" */;
-			buildPhases = (
-				7A37E2131AE588B100920C3B /* Sources */,
-				7A37E2141AE588B100920C3B /* Frameworks */,
-				7A37E2151AE588B100920C3B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A37E21A1AE588B100920C3B /* PBXTargetDependency */,
-			);
-			name = VDRPickerIOSTests;
-			productName = VDRPickerIOSTests;
-			productReference = 7A37E2171AE588B100920C3B /* VDRPickerIOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -158,12 +101,9 @@
 					7A37E20B1AE588B100920C3B = {
 						CreatedOnToolsVersion = 6.3;
 					};
-					7A37E2161AE588B100920C3B = {
-						CreatedOnToolsVersion = 6.3;
-					};
 				};
 			};
-			buildConfigurationList = 7A37E2071AE588B100920C3B /* Build configuration list for PBXProject "VDRPickerIOS" */;
+			buildConfigurationList = 7A37E2071AE588B100920C3B /* Build configuration list for PBXProject "RNMultiPicker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -175,48 +115,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A37E20B1AE588B100920C3B /* VDRPickerIOS */,
-				7A37E2161AE588B100920C3B /* VDRPickerIOSTests */,
+				7A37E20B1AE588B100920C3B /* RNMultiPickerIOS */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		7A37E2151AE588B100920C3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A37E2081AE588B100920C3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A37E22B1AE58A7F00920C3B /* VDRPickerManager.m in Sources */,
-				7A37E22A1AE58A7F00920C3B /* VDRPicker.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A37E2131AE588B100920C3B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CE683FD91B5F26EA00BF2B56 /* RNMultiPickerManager.m in Sources */,
+				CE683FDD1B5F278200BF2B56 /* RNMultiPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7A37E21A1AE588B100920C3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7A37E20B1AE588B100920C3B /* VDRPickerIOS */;
-			targetProxy = 7A37E2191AE588B100920C3B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7A37E21E1AE588B100920C3B /* Debug */ = {
@@ -339,42 +253,10 @@
 			};
 			name = Release;
 		};
-		7A37E2241AE588B100920C3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VDRPickerIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7A37E2251AE588B100920C3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VDRPickerIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A37E2071AE588B100920C3B /* Build configuration list for PBXProject "VDRPickerIOS" */ = {
+		7A37E2071AE588B100920C3B /* Build configuration list for PBXProject "RNMultiPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A37E21E1AE588B100920C3B /* Debug */,
@@ -383,20 +265,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A37E2201AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOS" */ = {
+		7A37E2201AE588B100920C3B /* Build configuration list for PBXNativeTarget "RNMultiPickerIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A37E2211AE588B100920C3B /* Debug */,
 				7A37E2221AE588B100920C3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7A37E2231AE588B100920C3B /* Build configuration list for PBXNativeTarget "VDRPickerIOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7A37E2241AE588B100920C3B /* Debug */,
-				7A37E2251AE588B100920C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
