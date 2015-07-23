@@ -1,6 +1,6 @@
 {
   "name": "react-native-multipicker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A UIPicker implementation that allows multiple UIPicker components.",
   "main": "multi-picker.ios",
   "scripts": {
@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/veddermatic/react-native-multipicker/issues"
   },
-  "homepage": "https://github.com/veddermatic/react-native-multipicker#readme",
-  "dependencies": {
-    "react-native": "0.8.0-rc.2"
-  }
+  "homepage": "https://github.com/veddermatic/react-native-multipicker#readme"
 }
