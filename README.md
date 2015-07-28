@@ -1,4 +1,4 @@
-# react-native-multi-picker
+# react-native-multipicker
 
 A UIPickerView implementation that allows you to have multiple
 components in your picker.
