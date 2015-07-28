@@ -33,7 +33,7 @@ var MultiPickerExampleApp = React.createClass({
 ```
 
 ##Getting started
-1. npm install react-native-multipicker --save
-2. In XCode, in the project navigator (the folder icon in the left pane), right click the folder `Libraries` ➜ choose 1Add Files to [your project's name]`
-3. Browse to `[your project's node_modules]/react-native-multipicker/ and choose `RNMultiPicker.xcodeproj`, and click `Add`
+1. `npm install react-native-multipicker --save`
+2. In XCode, in the project navigator (the folder icon in the left pane), right click the folder `Libraries` ➜ choose `Add Files to [your project's name]`
+3. Browse to `[your project's node_modules]/react-native-multipicker/` and choose `RNMultiPicker.xcodeproj`, and click `Add`
 4. In the XCode project navigator, select your project, select the Build Phases tab and in the `Link Binary With Libraries` drop down section add `libRNMultiPickerIOS.a`
