@@ -6,7 +6,7 @@ components in your picker.
 You can make a basic one like so:
 
 ```javascript
-var MultiPickerIOS = require('react-native-multi-picker');
+var MultiPickerIOS = require('react-native-multipicker');
 var { Group, Item } = MultiPickerIOS;
 
 var MultiPickerExampleApp = React.createClass({
