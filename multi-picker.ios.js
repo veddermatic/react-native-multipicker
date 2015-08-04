@@ -36,12 +36,14 @@ var MultiPickerIOS = React.createClass({
     var componentData = [];
     var selectedIndexes = [];
 
-    React.Children.forEach(props.children, function(child, index) {
+    React.Children.forEach(props.children, (child, index) => {
       var items = []
 
       var selectedIndex = 0;
       if (child.props.selectedIndex) {
         selectedIndex = child.props.selectedIndex;
+      } else if (child.props.initialSelectedIndex && !this.state) {
+        selectedIndex = child.props.initialSelectedIndex;
       }
 
       React.Children.forEach(child.props.children, function(child, idx) {
@@ -55,8 +57,9 @@ var MultiPickerIOS = React.createClass({
     return { componentData, selectedIndexes, };
   },
 
-  _onChange: function (event) {
+  _onChange(event) {
     var nativeEvent = event.nativeEvent;
+
     // Call any change handlers on the component itself
     if (this.props.onChange) {
       this.props.onChange(nativeEvent);
