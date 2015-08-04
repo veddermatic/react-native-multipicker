@@ -19,7 +19,6 @@ var MultiPickerIOS = React.createClass({
     componentData: PropTypes.any,
     selectedIndexes: PropTypes.array,
     onChange: PropTypes.func,
-    controlled:PropTypes.bool,
   },
 
   getInitialState() {
@@ -83,12 +82,7 @@ var MultiPickerIOS = React.createClass({
       componentData: this.state.componentData,
     };
 
-    // If we are a controlled instance, we tell the native component what
-    // it's value should be after any change.
-    if (this.props.controlled) {
-      nativeProps.selectedIndexes = this.state.selectedIndexes;
-    }
-
+    nativeProps.selectedIndexes = this.state.selectedIndexes;
     this.refs[PICKER_REF].setNativeProps(nativeProps);
   },
 
