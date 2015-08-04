@@ -19,29 +19,20 @@ var MultiPickerIOS = React.createClass({
     componentData: PropTypes.any,
     selectedIndexes: PropTypes.array,
     onChange: PropTypes.func,
-    controlled:PropTypes.bool,
   },
 
   getInitialState() {
-    return this._stateFromProps(this.props);
-  },
-
-  componentWillReceiveProps(nextProps) {
-    this.setState(this._stateFromProps(nextProps));
-  },
-
-  // converts child PickerComponent and their Item children into state
-  // that can be sent to RNMultiPicker native class.
-  _stateFromProps: function (props) {
     var componentData = [];
     var selectedIndexes = [];
 
-    React.Children.forEach(props.children, function(child, index) {
+    React.Children.forEach(this.props.children, (child, index) => {
       var items = []
 
       var selectedIndex = 0;
       if (child.props.selectedIndex) {
         selectedIndex = child.props.selectedIndex;
+      } else if (child.props.initialSelectedIndex && !this.state) {
+        selectedIndex = child.props.initialSelectedIndex;
       }
 
       React.Children.forEach(child.props.children, function(child, idx) {
@@ -55,8 +46,9 @@ var MultiPickerIOS = React.createClass({
     return { componentData, selectedIndexes, };
   },
 
-  _onChange: function (event) {
+  _onChange(event) {
     var nativeEvent = event.nativeEvent;
+
     // Call any change handlers on the component itself
     if (this.props.onChange) {
       this.props.onChange(nativeEvent);
@@ -80,12 +72,7 @@ var MultiPickerIOS = React.createClass({
       componentData: this.state.componentData,
     };
 
-    // If we are a controlled instance, we tell the native component what
-    // it's value should be after any change.
-    if (this.props.controlled) {
-      nativeProps.selectedIndexes = this.state.selectedIndexes;
-    }
-
+    nativeProps.selectedIndexes = this.state.selectedIndexes;
     this.refs[PICKER_REF].setNativeProps(nativeProps);
   },
 
