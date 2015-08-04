@@ -22,20 +22,10 @@ var MultiPickerIOS = React.createClass({
   },
 
   getInitialState() {
-    return this._stateFromProps(this.props);
-  },
-
-  componentWillReceiveProps(nextProps) {
-    this.setState(this._stateFromProps(nextProps));
-  },
-
-  // converts child PickerComponent and their Item children into state
-  // that can be sent to RNMultiPicker native class.
-  _stateFromProps: function (props) {
     var componentData = [];
     var selectedIndexes = [];
 
-    React.Children.forEach(props.children, (child, index) => {
+    React.Children.forEach(this.props.children, (child, index) => {
       var items = []
 
       var selectedIndex = 0;
