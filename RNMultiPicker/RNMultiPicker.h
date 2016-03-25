@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSArray *selectedIndexes;
 @property (nonatomic, copy) NSArray *componentData;
+@property (nonatomic, copy) NSArray *componentLoopingRows;
 
 @end

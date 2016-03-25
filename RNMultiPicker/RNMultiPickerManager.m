@@ -21,7 +21,8 @@ RCT_EXPORT_MODULE()
 }
 
 RCT_EXPORT_VIEW_PROPERTY(selectedIndexes, NSNumberArray);
-RCT_EXPORT_VIEW_PROPERTY(componentData, NSArray)
+RCT_EXPORT_VIEW_PROPERTY(componentData, NSArray);
+RCT_EXPORT_VIEW_PROPERTY(componentLoopingRows, NSArray);
 
 - (NSDictionary *)constantsToExport
 {
