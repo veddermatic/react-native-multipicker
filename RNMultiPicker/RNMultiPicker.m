@@ -181,7 +181,7 @@ const int MAX_LOOPING_ROWS = 16384;
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-  return MAX_LOOPING_ROWS;
+  return [self hasLoopingRows:component] ? MAX_LOOPING_ROWS : [self numberOfBaseRowsForComponent:component];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
