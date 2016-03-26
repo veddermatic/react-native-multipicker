@@ -23,7 +23,8 @@ const int MAX_LOOPING_ROWS = 16384;
   NSArray *_selectedIndexes;
   NSArray *_componentData;
   NSArray *_componentLoopingRows;
-  int _use_animation;
+  BOOL _selectedIndexesHaveChanged;
+  BOOL _use_animation;
 }
 
 #pragma mark - init method
@@ -32,7 +33,9 @@ const int MAX_LOOPING_ROWS = 16384;
   if (self = [super initWithFrame:CGRectZero]) {
     _eventDispatcher = eventDispatcher;
     self.delegate = self;
-    _use_animation = 0;
+    
+    _selectedIndexesHaveChanged = NO;
+    _use_animation = NO;
   }
   return self;
 }
@@ -43,21 +46,9 @@ const int MAX_LOOPING_ROWS = 16384;
 - (void)setSelectedIndexes:(NSArray *)selectedIndexes
 {
   if (![_selectedIndexes isEqualToArray:selectedIndexes]) {
-    BOOL animate = (_use_animation != 0);
-
     _selectedIndexes = [selectedIndexes copy];
-    // TODO: see if this loop to check if we should bother updating is even
-    // needed. React probably only updates us if we *do* need to update.
-    for (NSInteger i = 0; i < self.numberOfComponents; i++) {
-      NSInteger currentSelected = [self selectedRowInComponent:i];
-      NSInteger checkVal = [self adjustOrKeepRowIndex:[[_selectedIndexes objectAtIndex:i] integerValue] forComponent:i];
-      if (i < _selectedIndexes.count && currentSelected != checkVal ) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-          [self selectRow:checkVal inComponent:i animated:animate];
-        });
-      }
-    }
-    _use_animation = 1;
+    _selectedIndexesHaveChanged = YES;
+    _use_animation = NO;
   }
 }
 
@@ -80,7 +71,7 @@ const int MAX_LOOPING_ROWS = 16384;
 /**
  * Returns whether a picker component is looping rows or not
  */
-- (bool)hasLoopingRows:(NSInteger)component
+- (BOOL)hasLoopingRows:(NSInteger)component
 {
   return [[_componentLoopingRows objectAtIndex:component] boolValue];
 }
@@ -156,14 +147,32 @@ const int MAX_LOOPING_ROWS = 16384;
  */
 - (void)didSetProps:(NSArray<NSString *> *)changedProps
 {
-  if (changedProps.count > 0 && [changedProps containsObject:@"componentLoopingRows"]) {
-    // Reset indices for components with looping rows
-    for (NSInteger i = 0; i < self.numberOfComponents; i++) {
-      if ([self hasLoopingRows:i]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-          [self selectRow:[self adjustOrKeepRowIndex:[self selectedRowInComponent:i] forComponent:i] inComponent:i animated:NO];
-        });
+  if (changedProps.count > 0) {
+    if ([changedProps containsObject:@"componentLoopingRows"]) {
+      // Reset indices for components with looping rows
+      for (NSInteger i = 0; i < self.numberOfComponents; i++) {
+        if ([self hasLoopingRows:i]) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            [self selectRow:[self adjustOrKeepRowIndex:[self selectedRowInComponent:i] forComponent:i] inComponent:i animated:NO];
+          });
+        }
       }
+    }
+    
+    if ([changedProps containsObject:@"selectedIndexes"] && _selectedIndexesHaveChanged) {
+      // TODO: see if this loop to check if we should bother updating is even
+      // needed. React probably only updates us if we *do* need to update.
+      for (NSInteger i = 0; i < self.numberOfComponents; i++) {
+        NSInteger currentSelected = [self selectedRowInComponent:i];
+        NSInteger checkVal = [self adjustOrKeepRowIndex:[[_selectedIndexes objectAtIndex:i] integerValue] forComponent:i];
+        if (i < _selectedIndexes.count && currentSelected != checkVal ) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            [self selectRow:checkVal inComponent:i animated:_use_animation];
+          });
+        }
+      }
+      _selectedIndexesHaveChanged = NO;
+      _use_animation = YES;
     }
   }
 }
