@@ -17,6 +17,7 @@ var PICKER_REF = 'picker';
 var MultiPickerIOS = React.createClass({
   propTypes: {
     componentData: PropTypes.any,
+    componentLoopingRows: PropTypes.array,
     selectedIndexes: PropTypes.array,
     onChange: PropTypes.func,
   },
@@ -24,6 +25,7 @@ var MultiPickerIOS = React.createClass({
   getInitialState() {
     var componentData = [];
     var selectedIndexes = [];
+    var componentLoopingRows = [];
 
     React.Children.forEach(this.props.children, (child, index) => {
       var items = []
@@ -35,6 +37,8 @@ var MultiPickerIOS = React.createClass({
         selectedIndex = child.props.initialSelectedIndex;
       }
 
+      componentLoopingRows.push(!!child.props.loopingRows);
+
       React.Children.forEach(child.props.children, function(child, idx) {
         items.push({label: child.props.label, value: child.props.value});
       });
@@ -43,7 +47,7 @@ var MultiPickerIOS = React.createClass({
       selectedIndexes.push(selectedIndex);
     });
 
-    return { componentData, selectedIndexes, };
+    return { componentData, componentLoopingRows, selectedIndexes, };
   },
 
   _onChange(event) {
@@ -70,9 +74,10 @@ var MultiPickerIOS = React.createClass({
 
     var nativeProps = {
       componentData: this.state.componentData,
+      componentLoopingRows: this.state.componentLoopingRows,
     };
 
-    nativeProps.selectedIndexes = this.state.selectedIndexes;
+      nativeProps.selectedIndexes = this.state.selectedIndexes;
     this.refs[PICKER_REF].setNativeProps(nativeProps);
   },
 
@@ -82,8 +87,9 @@ var MultiPickerIOS = React.createClass({
         <RNMultiPicker
             ref={PICKER_REF}
             style={styles.multipicker}
-            selectedIndexes={this.state.selectedIndexes}
             componentData={this.state.componentData}
+            componentLoopingRows={this.state.componentLoopingRows}
+            selectedIndexes={this.state.selectedIndexes}
             onChange={this._onChange} />
       </View>
     );
@@ -96,6 +102,7 @@ MultiPickerIOS.Group = React.createClass({
     items: React.PropTypes.array,
     selectedIndex: React.PropTypes.number,
     onChange: React.PropTypes.func,
+    loopingRows: React.PropTypes.bool,
   },
 
   render() {
