@@ -9,8 +9,9 @@
  */
 'use strict';
 
-var React = require('react-native');
-var { StyleSheet, View, NativeModules, PropTypes, requireNativeComponent, } = React;
+import React, {StyleSheet, View, PropTypes, requireNativeComponent} from 'react';
+import {NativeModules} from 'react-native';
+
 var RNMultiPickerConsts = NativeModules.UIManager.RNMultiPicker.Constants;
 var PICKER_REF = 'picker';
 
