@@ -9,8 +9,8 @@
  */
 'use strict';
 
-import React, {StyleSheet, View, PropTypes, requireNativeComponent} from 'react';
-import {NativeModules} from 'react-native';
+import React, {PropTypes} from 'react';
+import {StyleSheet, View, NativeModules, requireNativeComponent} from 'react-native';
 
 var RNMultiPickerConsts = NativeModules.UIManager.RNMultiPicker.Constants;
 var PICKER_REF = 'picker';
@@ -36,7 +36,7 @@ var MultiPickerIOS = React.createClass({
         selectedIndex = child.props.initialSelectedIndex;
       }
 
-      React.Children.forEach(child.props.children, function(child, idx) {
+      React.Children.forEach(child.props.children, function (child, idx) {
         items.push({label: child.props.label, value: child.props.value});
       });
 
@@ -44,7 +44,7 @@ var MultiPickerIOS = React.createClass({
       selectedIndexes.push(selectedIndex);
     });
 
-    return { componentData, selectedIndexes, };
+    return {componentData, selectedIndexes,};
   },
 
   _onChange(event) {
@@ -81,11 +81,11 @@ var MultiPickerIOS = React.createClass({
     return (
       <View style={this.props.style}>
         <RNMultiPicker
-            ref={PICKER_REF}
-            style={styles.multipicker}
-            selectedIndexes={this.state.selectedIndexes}
-            componentData={this.state.componentData}
-            onChange={this._onChange} />
+          ref={PICKER_REF}
+          style={styles.multipicker}
+          selectedIndexes={this.state.selectedIndexes}
+          componentData={this.state.componentData}
+          onChange={this._onChange}/>
       </View>
     );
   },
