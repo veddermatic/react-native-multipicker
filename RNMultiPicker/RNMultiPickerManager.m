@@ -7,8 +7,8 @@
 
 #import "RNMultiPickerManager.h"
 
-#import "RCTBridge.h"
-#import "RCTConvert.h"
+#import <React/RCTBridge.h>
+#import <React/RCTConvert.h>
 #import "RNMultiPicker.h"
 
 @implementation RNMultiPickerManager
