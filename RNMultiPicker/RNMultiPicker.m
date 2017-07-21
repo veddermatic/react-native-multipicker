@@ -6,7 +6,6 @@
 #import "RNMultiPicker.h"
 
 #import <React/RCTConvert.h>
-#import <React/RCTEventDispatcher.h>
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
 
@@ -17,17 +16,15 @@
 
 @implementation RNMultiPicker
 {
-  RCTEventDispatcher *_eventDispatcher;
   NSArray *_selectedIndexes;
   NSArray *_componentData;
   int _use_animation;
 }
 
 #pragma mark - init method
-- (id)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
+- (id)init
 {
   if (self = [super initWithFrame:CGRectZero]) {
-    _eventDispatcher = eventDispatcher;
     self.delegate = self;
     _use_animation = 0;
   }
@@ -122,14 +119,16 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-  NSDictionary *event = @{
+  if (!self.onChange) {
+    return;
+  }
+
+  self.onChange(@{
     @"target": self.reactTag,
     @"newIndex": @(row),
     @"component": @(component),
     @"newValue": [self valueForRow:row inComponent:component]
-  };
-
-  [_eventDispatcher sendInputEventWithName:@"topChange" body:event];
+  });
 }
 
 @end

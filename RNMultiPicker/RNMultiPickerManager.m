@@ -17,11 +17,12 @@ RCT_EXPORT_MODULE()
 
 - (UIView *)view
 {
-  return [[RNMultiPicker alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+  return [[RNMultiPicker alloc] init];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(selectedIndexes, NSNumberArray);
 RCT_EXPORT_VIEW_PROPERTY(componentData, NSArray)
+RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 
 - (NSDictionary *)constantsToExport
 {

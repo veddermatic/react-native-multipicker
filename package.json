@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/veddermatic/react-native-multipicker/issues"
   },
-  "homepage": "https://github.com/veddermatic/react-native-multipicker#readme"
+  "homepage": "https://github.com/veddermatic/react-native-multipicker#readme",
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  }
 }
