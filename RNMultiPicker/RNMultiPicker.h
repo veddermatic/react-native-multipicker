@@ -4,13 +4,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class RCTEventDispatcher;
+
+#import <React/RCTComponent.h>
 
 @interface RNMultiPicker : UIPickerView
 
-- (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher NS_DESIGNATED_INITIALIZER;
-
 @property (nonatomic, copy) NSArray *selectedIndexes;
 @property (nonatomic, copy) NSArray *componentData;
+@property (nonatomic, copy) RCTBubblingEventBlock onChange;
 
 @end
